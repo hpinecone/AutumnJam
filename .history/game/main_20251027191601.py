@@ -9,8 +9,8 @@ screen_width = info.current_w #original screen width
 screen_height = info.current_h #original screen height
 
 #os buttons would be cut off to remedy this implement this (resize button, exit button, etc)
-uscreen_w = screen_width * 0.9 #updated screen width to account for buttons missing
-uscreen_h = screen_height * 0.9 #updated screen height
+uscreen_w = screen_width * 90 #updated screen width to account for buttons missing
+uscreen_h = screen_height * 90 #updated screen height
 
 """
 add resolution scale here later

@@ -5,27 +5,23 @@ import pygame_gui
 pygame.init()
 
 info = pygame.display.Info()
-screen_width = info.current_w #original screen width
-screen_height = info.current_h #original screen height
-
-#os buttons would be cut off to remedy this implement this (resize button, exit button, etc)
-uscreen_w = screen_width * 0.9 #updated screen width to account for buttons missing
-uscreen_h = screen_height * 0.9 #updated screen height
-
+screen_width = info.current_w
+screen_height = info.current_h
+uscreen_w = screen_width * 90
+uscreen_h = screen_height * 90
 """
 add resolution scale here later
 """
 
 print("Detected resolution: ", screen_width, " X ", screen_height)
-print("Updated resolution: ", uscreen_w, " X ", uscreen_h)
 
 pygame.display.set_caption('Autumn') #change later
-window_surface = pygame.display.set_mode((uscreen_w, uscreen_h), pygame.RESIZABLE)
+window_surface = pygame.display.set_mode((screen_width,screen_height), pygame.RESIZABLE)
 
-background = pygame.Surface((uscreen_w, uscreen_h))
+background = pygame.Surface((screen_width,screen_height))
 background.fill(pygame.Color('#000000'))
 
-manager = pygame_gui.UIManager((uscreen_w, uscreen_h))
+manager = pygame_gui.UIManager((screen_width,screen_height))
 
 clock = pygame.time.Clock()
 
