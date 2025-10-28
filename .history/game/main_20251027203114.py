@@ -23,15 +23,13 @@ pygame.display.set_caption('Autumn') #change later
 window_surface = pygame.display.set_mode((uscreen_w, uscreen_h), pygame.RESIZABLE)
 
 background = pygame.Surface((uscreen_w, uscreen_h))
-background.fill(pygame.Color("#676767"))
+background.fill(pygame.Color("#616161"))
 
 manager = pygame_gui.UIManager((uscreen_w, uscreen_h))
 
 clock = pygame.time.Clock()
 
 is_running = True
-
-tick = 0 #temp world tick
 
 while is_running:
     time_delta = clock.tick(60)/1000.0
@@ -42,10 +40,6 @@ while is_running:
             manager.process_events(event)
         
         manager.update(time_delta)
-
-        #time manager (tick)
-        tick+=1
-        print(tick, "tick")
 
         window_surface.blit(background, (0,0))
         manager.draw_ui(window_surface)

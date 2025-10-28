@@ -31,7 +31,7 @@ clock = pygame.time.Clock()
 
 is_running = True
 
-tick = 0 #temp world tick
+tick = 0
 
 while is_running:
     time_delta = clock.tick(60)/1000.0
@@ -43,7 +43,6 @@ while is_running:
         
         manager.update(time_delta)
 
-        #time manager (tick)
         tick+=1
         print(tick, "tick")
 
