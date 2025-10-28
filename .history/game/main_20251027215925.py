@@ -50,7 +50,7 @@ def run():
             #time manager (tick)
             tick+=1
             if(tick < 30):
-                print(tick, "tick") #ensure game launches
+                print(tick, "tick")
 
             window_surface.blit(background, (0,0))
             manager.draw_ui(window_surface)
